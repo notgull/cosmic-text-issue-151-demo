@@ -96,7 +96,7 @@ fn main() {
         240..346,
         ct::Attrs {
             color_opt: Some(RED),
-            family: ct::Family::Monospace,
+//            family: ct::Family::Monospace,
             ..default_attrs
         },
     );
