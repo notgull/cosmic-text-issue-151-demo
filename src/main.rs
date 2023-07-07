@@ -1,7 +1,7 @@
 // MIT/Apache2 License.
 //! Reproduction of cosmic text issue #151
-//! 
-//! This version uses cosmic_text v0.8.0, which works and does not justify text.
+//!
+//! This version uses cosmic_text v0.9.0, which unexpectedly justifies text.
 
 use cosmic_text::{self as ct, Buffer, BufferLine, Color, FontSystem};
 
@@ -102,7 +102,7 @@ fn main() {
     );
 
     // Create and format the text.
-    let line = BufferLine::new(TEXT, list);
+    let line = BufferLine::new(TEXT, list, ct::Shaping::Advanced);
     buffer.lines = vec![line];
     buffer.set_wrap(&mut fs, ct::Wrap::Word);
     buffer.set_size(&mut fs, 250.0, 300.0);
